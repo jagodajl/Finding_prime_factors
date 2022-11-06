@@ -1,8 +1,8 @@
 factors = []
 
-
-def generate_prime_factors(number, factors):
-    """Accepts a number and generates prime factors for this number"""
+def prime_factors(number, factors):
+    """Accepts a number as a first argument and as a result completes the list of prime factors.
+    For the function to work properly, enter [] as the second attribute"""
     # function raises an error whenever typed value is not an int
     if type(number) is not int:
         raise ValueError
@@ -20,6 +20,8 @@ def generate_prime_factors(number, factors):
 
         return factors
 
+# checking how it works
+print(prime_factors(3958159172, []))
 
 if __name__ == '__main__':
     print('PyCharm')
