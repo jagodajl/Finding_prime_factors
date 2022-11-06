@@ -1,4 +1,5 @@
 import pytest
+
 import prime
 
 
@@ -11,3 +12,7 @@ def test_integer():
             prime.generate_prime_factors(value, factors)
 
 
+def test_param_one():
+    factors = []
+    value = 1
+    assert len(prime.generate_prime_factors(value, factors)) == 0
