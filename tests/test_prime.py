@@ -11,6 +11,7 @@ def test_integer():
         with pytest.raises(ValueError):
             prime.generate_prime_factors(value, factors)
 
+
 # the following tests check various parameters
 def test_param_1():
     factors = []
@@ -25,8 +26,16 @@ def test_param_2():
 
     assert len(output_list) == 1 and output_list[0] == 2
 
+
 def test_param_3():
     factors = []
     value = 3
     output_list = prime.generate_prime_factors(value, factors)
     assert len(output_list) == 1 and output_list[0] == 3
+
+
+def test_param_4():
+    factors = []
+    value = 4
+    output_list = prime.generate_prime_factors(value, factors)
+    assert len(output_list) == 2 and output_list[0] == 2 and output_list[1] == 2
