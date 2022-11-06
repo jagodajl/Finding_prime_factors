@@ -53,3 +53,10 @@ def test_param_8():
     value = 8
     output_list = prime.generate_prime_factors(value, factors)
     assert len(output_list) == 3 and output_list[0] == 2 and output_list[1] == 2 and output_list[2] == 2
+
+def test_param_9():
+    factors = []
+    value = 9
+    output_list = prime.generate_prime_factors(value, factors)
+    # Assert only 2 values - [2, 3]:
+    assert len(output_list) == 2 and output_list[0] == 3 and output_list[1] == 3
