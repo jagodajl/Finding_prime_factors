@@ -9,8 +9,14 @@ def generate_prime_factors(number, factors):
     else:
         # function appends factor to the list of factors if it can be divided evenly with no remainder
         i = 2
-        if (number % i) == 0:
-            factors.append(i)
+        while i <= number:
+            if (number % i) == 0:
+                factors.append(i)
+                # function assigns a decreased value to a number by dividing itself with the current iterator:
+                number /= i
+            else:
+                # for values higher than 2, iterate i by 1 each time
+                i += 1
 
         return factors
 
