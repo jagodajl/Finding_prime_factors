@@ -39,3 +39,9 @@ def test_param_4():
     value = 4
     output_list = prime.generate_prime_factors(value, factors)
     assert len(output_list) == 2 and output_list[0] == 2 and output_list[1] == 2
+
+def test_param_6():
+    factors = []
+    value = 6
+    output_list = prime.generate_prime_factors(value, factors)
+    assert len(output_list) == 2 and output_list[0] == 2 and output_list[1] == 3
